@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KT's Sweet Spot</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: #ffb6c1 url('https://as2.ftcdn.net/v2/jpg/15/20/42/55/1000_F_1520425575_OjIGVUwu4dF0lRaXm5LSHtmsuyEYudpv.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #6b003b;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+    }
+
+    header {
+      background-color: rgba(255, 105, 180, 0.85);
+      padding: 1rem 2rem;
+      margin-top: 1rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      border: 2px dashed white;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 2px 2px #ff69b4;
+    }
+
+    .content {
+      background-color: rgba(255, 240, 245, 0.95);
+      padding: 2rem;
+      border-radius: 25px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      margin-top: 2rem;
+      max-width: 700px;
+      border: 3px dotted #ff69b4;
+    }
+
+    .content p {
+      font-size: 1.3rem;
+      margin: 1rem 0;
+      color: #d63384;
+    }
+
+    .love-message {
+      background-color: rgba(255, 182, 193, 0.95);
+      padding: 1rem 2rem;
+      border-radius: 20px;
+      margin-top: 1rem;
+      font-size: 1.4rem;
+      font-weight: bold;
+      color: #c2185b;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .heart {
+      font-size: 2.5rem;
+      color: #ff1493;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+      100% { transform: scale(1); }
+    }
+
+    #musicButton {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 10px 20px;
+      background-color: #ff69b4;
+      border: none;
+      border-radius: 20px;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body>
+  <button id="musicButton">Play Music 🎵</button>
+  <audio id="bgMusic" src="https://dn720305.ca.archive.org/0/items/grover-washington-jr.-feat.-bill-withers-just-the-two-of-us-hq_202202/Grover%20Washington%20Jr.%20feat.%20Bill%20Withers%20-%20Just%20The%20Two%20of%20Us%20%5BHQ%5D.mp3"></audio>
+
+  <header>
+    <h1>Hello Princess</h1>
+  </header>
+  <div class="content">
+    <p>hello my little cupcake i hope you are doing well. i just wanted to say I LOVE YOU and well that you are MY PRETTY PRINCESS(YUPPIEEEEEEEE). Can't wait to go out with you 1 year p :D. love you honey. run to me when things get heavy and im sorry for the sydney sweeney thing... i hope u forgive me i wont do the same thing twice i promise. goodnight love ya</p>
+    <p class="heart">❤️</p>
+  </div>
+
+  <div class="love-message">
+    IM SO IN LOVE WITH YOU KRITIKA.
+  </div>
+
+  <script>
+    const musicButton = document.getElementById('musicButton');
+    const bgMusic = document.getElementById('bgMusic');
+    musicButton.addEventListener('click', () => {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        musicButton.textContent = 'Pause Music ⏸️';
+      } else {
+        bgMusic.pause();
+        musicButton.textContent = 'Play Music 🎵';
+      }
+    });
+  </script>
+</body>
+</html>
